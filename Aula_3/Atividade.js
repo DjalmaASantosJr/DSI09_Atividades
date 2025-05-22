@@ -22,3 +22,33 @@ const {titulo, autor, ano, sinopse, editora} = livro;
 
 console.log(titulo);
 console.log(ano);
+
+const frutas = ["Maçã", "Banana"];
+const novasFrutas = ["Laranja", "Abacaxi"];
+const todasAsFrutas = [...frutas, ...novasFrutas];
+
+console.log(todasAsFrutas);
+
+const verificarAcesso = (idade, temIngresso) => {
+   if(idade >= 18 && temIngresso) {
+    console.log("Acesso permitido");   
+   }else{
+    console.log("Acesso negado");
+   }
+}
+
+verificarAcesso(18, true);
+verificarAcesso(17, true);
+verificarAcesso(20, false);
+
+const exibirAviso = (estaChovendo, semGuardaChuva) => {
+   if(estaChovendo || semGuardaChuva) {
+      console.log("Leve um guarda-chuva!");
+   }else{
+      console.log("Tudo certo, pode sair tranquilo");
+   }
+};
+
+exibirAviso(true, false);
+exibirAviso(false, true);
+exibirAviso(false, false);
